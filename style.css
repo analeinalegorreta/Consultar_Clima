@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    width: 100%;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+h2{
+    text-align: center;
+    color: white;
+    margin: 20px;
+}
+
+
+.section2{
+    text-align: center;
+    color: white;
+    margin: 20px;
+
+
+}
+
+#formulario .dos {
+
+
+    display: flex;
+  align-items: center;
+  justify-content: center;
+   
+
+}
+#formulario .uno {
+
+
+    display: flex;
+  align-items: center;
+  justify-content: center;
+   
+
+}
+
+#formulario .tres {
+
+
+    display: flex;
+  align-items: center;
+  justify-content: center;
+   
+
+}
+
+.ciudad{
+
+    color: white;
+    font-family: inherit;
+    display: inline-block;
+    width: 35%;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #d3d0d0;
+    padding: 3px 0 10px 30px;
+   
+}
+
+
+.pais{
+
+    font-family: inherit;
+    display: inline-block;
+  
+    background: none;
+   
+    border: 50%;
+   
+    padding: 10px 20px 10px 30px;
+}
+
+
+.submit{
+
+    display: inline-block;
+    margin-top: 40px;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    background:#6c63ff ;
+    cursor: pointer;
+    border-radius: 5px;
+transition: transform .4s;  /* efecto zoom en el boton */
+
+
+}
+
+
+::placeholder { color: white; }
+
+
+select,
+option {
+  color: rgb(70, 3, 126);
+}
+
+
+.error-formato{
+
+    background-color: rgba(255, 0, 0, 0.349);
+    text-align: center;
+    padding: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    
+    }
+
+   
+.formato{
+
+    background-color: rgba(7, 121, 228, 0.541);
+    text-align: center;
+    padding: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    
+    }
+      
+     
+
+/*spinner* ***************************/
+
+
+.spinner {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    
+    -webkit-animation: sk-rotate 2.0s infinite linear;
+    animation: sk-rotate 2.0s infinite linear;
+  }
+  
+  .dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: rgb(250, 249, 249);
+    border-radius: 100%;
+    
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  @-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+  @keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
+
+
+
