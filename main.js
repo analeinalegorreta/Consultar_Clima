@@ -74,7 +74,7 @@ function consultarAPI(ciudad, pais) {
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`;
 
-Spinner(); // Muestra un spinner de carga
+    Spinner(); // Muestra un spinner de carga
 
     fetch(url)
         .then(respuesta => respuesta.json())
@@ -84,7 +84,7 @@ Spinner(); // Muestra un spinner de carga
 
             limpiarHTML(); // Limpiar el HTML previo
 
-      
+
 
             if (datos.cod === "404") {
 
@@ -95,52 +95,52 @@ Spinner(); // Muestra un spinner de carga
             // Imprime la respuesta que mostrara el HTML
             mostrarClima(datos);
 
-            
+
         })
 
 }
 
-function mostrarClima(datos){
+function mostrarClima(datos) {
 
-    const {name, main : { temp, temp_max, temp_min}} = datos;
- const centigrados= kelvinACentigrados(temp);
- const max= kelvinACentigrados(temp_max);
- const min= kelvinACentigrados(temp_min);
-
- 
-
-const resultadoDiv =document.createElement('div');
-resultadoDiv.innerHTML=` Temperatura Actual en ${name} de : ${centigrados} &#8451 <br>   <br> Max : ${max} &#8451; <br> Min : ${min} &#8451;`;
-
-resultadoDiv.classList.add('formato');
+    const { name, main: { temp, temp_max, temp_min } } = datos;
+    const centigrados = kelvinACentigrados(temp);
+    const max = kelvinACentigrados(temp_max);
+    const min = kelvinACentigrados(temp_min);
 
 
-resultado.appendChild(resultadoDiv);
+
+    const resultadoDiv = document.createElement('div');
+    resultadoDiv.innerHTML = ` Temperatura Actual en ${name} de : ${centigrados} &#8451 <br>   <br> Max : ${max} &#8451; <br> Min : ${min} &#8451;`;
+
+    resultadoDiv.classList.add('formato');
+
+
+    resultado.appendChild(resultadoDiv);
 
 
 
 }
 
-const kelvinACentigrados = grados =>parseInt(grados-273.15);
+const kelvinACentigrados = grados => parseInt(grados - 273.15);
 
 
 
-function limpiarHTML (){
-    while(resultado.firstChild){
+function limpiarHTML() {
+    while (resultado.firstChild) {
 
-resultado.removeChild(resultado.firstChild);
+        resultado.removeChild(resultado.firstChild);
 
     }
 }
 
 
 
-function Spinner(){
+function Spinner() {
 
     limpiarHTML();
 
 
-    const divSpinner =document.createElement('div');
+    const divSpinner = document.createElement('div');
     divSpinner.classList.add('spinner');
 
     divSpinner.innerHTML = `
